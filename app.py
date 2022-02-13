@@ -1,5 +1,6 @@
 import pickle
 import streamlit as st
+import pandas as pd
 
 
 def recommend(movie):
@@ -24,9 +25,9 @@ def recommend(movie):
 
 
 st.header('Netflix Movie/Series Recommender System')
-movies = pickle.load(open('movie_list.pkl','rb'))
-info = pickle.load(open('movie_info.pkl','rb'))
-similarity = pickle.load(open('similarity.pkl','rb'))
+movies = pd.read_pickle('movie_list.pkl')
+info = pd.read_pickle('movie_info.pkl')
+similarity = pd.read_pickle(open('similarity.pkl')
 
 
 
